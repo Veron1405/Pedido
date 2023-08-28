@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido pra ias</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #423fff;
+        }
+        .btn{
+            background-color: #FFCFD2;
+            font: 300 40px 'Poppins', sans-serif;
+            padding: 15px 30px;
+            border-radius: 15px;
+            transition: ease-in-out 0.4s;
+            cursor: pointer;
+            width: 200px;
+        }
+        .tituloPrincipal{
+            font: 700 48px 'Poppins', sans-serif;
+        }
+        .titulo{
+            margin-top: 30px;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+        .botoes{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 255px;
+            flex-wrap: wrap;
+        }
+        .imagem {
+            position: absolute;
+            left: 490px;
+            top: 200px;
+            height: 450px;
+            width: 550px;
+        }
+
+        @media screen and (max-width: 400px) {
+            .botoes{
+                margin: 0;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sim(){
+            location.href = 'https://www.youtube.com/watch?v=A9kTV-wpiWk'
+        }
+        function desvia(btn){
+            btn.style.position = 'absolute'
+            btn.style.bottom = posicao(10, 80)
+            btn.style.left = posicao(10, 80)
+        }
+        function posicao(min, max){
+            return(Math.random()*(max - min + min)) + '%'
+        }
+    </script>
+    <img class="imagem" src="2.png">
+    <div class="titulo">
+        <h1 class="tituloPrincipal">Aceita ser feliz comigo?</h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">SIM</button>
+        </div>
+        <div class="botaoM">
+            <button class="btn" onmouseover="desvia(this)" onclick="desvia(this)">não</button>
+        </div>
+    </div>
+    
+</body>
+</html>
